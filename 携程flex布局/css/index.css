@@ -1,0 +1,236 @@
+body {
+  min-width: 320px;
+  max-width: 540px;
+  margin: 0 auto;
+  color: #666;
+  background-color: #ccc;
+}
+
+a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #666;
+}
+
+
+/* ------------------------------------------------header */
+
+
+/* 1.整体：左侧是自由伸缩，flex:1 */
+
+header {
+  height: 44px;
+  display: flex;
+  background-color: #F6F6F6;
+  border-bottom: 1px solid #ccc;
+  /* 固定定位 */
+  position: fixed;
+  width: 100%;
+  min-width: 320px;
+  max-width: 540px;
+}
+
+header div {
+  flex: 1;
+  background-color: #fff;
+}
+
+header a {
+  width: 44px;
+  height: 100%;
+  text-align: center;
+}
+
+
+/* 2.右侧：图片伪元素，块级 */
+
+header a::before {
+  content: "";
+  display: block;
+  width: 23px;
+  height: 23px;
+  background: url('../imgs/sprite.png') no-repeat -59px -194px;
+  background-size: 104px;
+  margin: 3px auto;
+}
+
+
+/* 3.左侧：margin、border.. */
+
+header .search {
+  margin: 7px 10px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  position: relative;
+  /* 3.2 文字 */
+  line-height: 30px;
+  padding-left: 25px;
+  font-size: 14px;
+}
+
+
+/* 3.1 伪元素：定位 */
+
+header .search::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 5px;
+  width: 15px;
+  height: 15px;
+  background: url('../imgs/sprite.png') no-repeat -59px -279px;
+  background-size: 104px;
+}
+
+
+/* --------------------------------------------------- 轮播图*/
+
+.banner {
+  padding-top: 45px;
+}
+
+.banner a {
+  display: block;
+}
+
+.banner a img {
+  width: 100%;
+}
+
+
+/* -------------------------------------------------------nav_1 */
+
+
+/* 1.整体布局 */
+
+.nav_1 {
+  display: flex;
+  height: 64px;
+  background-color: #fff;
+  /* 3.整体修饰 */
+  border-radius: 5px;
+  margin: 3px 5px;
+}
+
+.nav_1 a {
+  flex: 1;
+  /* 不冲突 */
+  /* 2.子元素布局：*/
+  display: flex;
+  /* 2.1：确认主轴：Y */
+  flex-direction: column;
+  /* 2.2 侧轴对齐：居中 */
+  align-items: center;
+  font-size: 14px;
+}
+
+.nav_1 a .icon_1 {
+  width: 32px;
+  height: 32px;
+  background: url('../imgs/localnav_bg.png') no-repeat;
+  background-size: 32px;
+  margin: 5px 0px;
+}
+
+
+/* -------------------------------------------------------nav_2 */
+
+
+/* 1.整体布局 */
+
+.nav_2 {
+  display: flex;
+  height: 128px;
+  background-color: #fff;
+  /* 1.1 换行 */
+  flex-wrap: wrap;
+  /* 3.整体修饰 */
+  border-radius: 5px;
+  margin: 3px 5px;
+}
+
+.nav_2 a {
+  flex: 20%;
+  /* 不冲突 */
+  /* 2.子元素布局：*/
+  display: flex;
+  /* 2.1：确认主轴：Y */
+  flex-direction: column;
+  /* 2.2 侧轴对齐：居中 */
+  align-items: center;
+  font-size: 14px;
+}
+
+.nav_2 a .icon_1 {
+  width: 24px;
+  height: 24px;
+  background: url('../imgs/subnav-bg.png') no-repeat;
+  background-size: 24px;
+  margin: 8px 0px;
+}
+
+
+/* ------------------------------------------------------------大导航 */
+
+nav {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+
+/* 1.一行 :flex布局，局部flex:1*/
+
+nav .main {
+  height: 88px;
+  display: flex;
+  background: -webkit-linear-gradient(0, #FA5A55, #FA994D);
+}
+
+nav .main .box {
+  flex: 1;
+  /* 2.1flex布局*/
+  display: flex;
+  /* 2.2 主轴 */
+  flex-direction: column;
+}
+
+
+/* 2.局部子元素：flex布局， 局部flex:1*/
+
+nav .main .box a {
+  flex: 1;
+  line-height: 44px;
+  text-align: center;
+  color: #fff;
+}
+
+
+/* 3.整体的线修饰 ：选择后两个*/
+
+nav .main .box:nth-child(n+2) {
+  border-left: 1px solid #fff;
+}
+
+
+/* 4.局部水平线修饰 */
+
+nav .main .box a:nth-child(2) {
+  border-top: 1px solid #fff;
+}
+
+
+/* 5.给 第一个盒子的a 插入背景图片 */
+
+nav .main .box:nth-child(1) a {
+  background: url('../imgs/hotel.png') no-repeat;
+  background-position: bottom center;
+  background-size: 106px;
+}
+
+
+/* 6. 第二大行 上下游边距 */
+
+nav .main:nth-child(2) {
+  margin: 5px 0;
+}
