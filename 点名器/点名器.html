@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body {
+      text-align: center;
+    }
+    table {
+      border-spacing: 0;
+      margin: 100px auto; 
+    }
+    tr {
+      height: 40px;
+    }
+    td {
+      width: 80px;
+      height: 40px;
+      text-align: center;
+    }
+    input {
+      width: 100px;
+      height: 40px;
+      border-radius: 10px;
+      border: solid 1px #ddd;
+      outline: none;
+      color: green;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <table border='1'>
+    <tr>
+      <th colspan="9">
+        点名器
+      </th>
+    </tr>
+    <tr>
+      <td>同学1</td>
+      <td>同学2</td>
+      <td>同学3</td>
+      <td>同学4</td>
+      <td>同学5</td>
+      <td>同学6</td>
+      <td>同学7</td>
+      <td>同学8</td>
+      <td>同学9</td>
+    </tr>
+    <tr>
+      <td>同学1</td>
+      <td>同学2</td>
+      <td>同学3</td>
+      <td>同学4</td>
+      <td>同学5</td>
+      <td>同学6</td>
+      <td>同学7</td>
+      <td>同学8</td>
+      <td>同学9</td>
+    </tr>
+    <tr>
+      <td>同学1</td>
+      <td>同学2</td>
+      <td>同学3</td>
+      <td>同学4</td>
+      <td>同学5</td>
+      <td>同学6</td>
+      <td>同学7</td>
+      <td>同学8</td>
+      <td>同学9</td>
+    </tr>
+    <tr>
+      <td>同学1</td>
+      <td>同学2</td>
+      <td>同学3</td>
+      <td>同学4</td>
+      <td>同学5</td>
+      <td>同学6</td>
+      <td>同学7</td>
+      <td>同学8</td>
+      <td>同学9</td>
+    </tr>
+    <tr>
+      <td>同学1</td>
+      <td>同学2</td>
+      <td>同学3</td>
+      <td>同学4</td>
+      <td>同学5</td>
+      <td>同学6</td>
+      <td>同学7</td>
+      <td>同学8</td>
+      <td>同学9</td>
+    </tr>
+    <tr>
+      <td>同学1</td>
+      <td>同学2</td>
+      <td>同学3</td>
+      <td>同学4</td>
+      <td>同学5</td>
+      <td>同学6</td>
+      <td>同学7</td>
+      <td>同学8</td>
+      <td>同学9</td>
+    </tr>
+  </table>
+  <input type="button" value="开 始">
+  <script>
+    // 获取所有td
+    var tds = document.querySelectorAll('td');
+    // 创建定时器的名称
+    var timer;
+    // 1. 获取事件源 -- 按钮
+    var btn = document.querySelector('input');
+    // 2. 添加事件类型 -- click
+    btn.onclick = function (){
+    // 3. 添加事件处理程序
+      if(btn.value  == '开 始'){
+      // 事情A
+      // 1) 背景闪动
+         // 获取随机数
+         changeCellbg();
+      // 2) 修改按钮内容 -- '结 束'
+        this.value = '结 束';
+        
+      }else{
+      // 事情B
+      // 1) 背景闪动停止
+        clearInterval(timer);
+      // 2) 修改按钮内容 -- '开 始'
+        this.value = '开 始';
+      }
+    }
+   
+    // 封装函数：动态随机设置td的背景
+    function changeCellbg () {
+      timer = setInterval(function(){
+        var index = parseInt(Math.random()*(tds.length-1 - 0 + 1 )+ 0);
+        for(var i = 0;i<tds.length;i++){
+          tds[i].style.backgroundColor = '#fff';
+        }
+        tds[index].style.backgroundColor = getColor();
+      },30)
+    }
+
+    // 封装函数：获取随机颜色
+    function getColor () {
+      var R = parseInt(Math.random()*(255 - 0 +1)+0);
+      var G = parseInt(Math.random()*(255 - 0 +1)+0);
+      var B = parseInt(Math.random()*(255 - 0 +1)+0);
+      return 'rgb('+R+','+G+','+B+')'
+    }
+  </script>
+</body>
+
+</html>
