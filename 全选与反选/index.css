@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid #c0c0c0;
+    width: 500px;
+    margin: 100px auto;
+    text-align: center;
+  }
+  
+  th {
+    background-color: yellowgreen;
+    font: bold 16px "微软雅黑";
+    color: black;
+    height: 24px;
+  }
+  
+  td {
+    border: 1px solid olivedrab;
+    color: black;
+    background-color: orange;
+    padding: 10px;
+  }
