@@ -1,0 +1,1 @@
+.box{border:1px solid #000;width:100px;height:100px;justify-content:center;align-items:center;font-size:50px;background-color:#0ff}.box,.box-1,.row{display:flex}.box-1{justify-content:center;align-items:center;flex-direction:column}.box-1>div:first-child{margin:10px 0;color:#00f;font-weight:700}.box-1>div:last-child{color:red;font-weight:700;margin:10px 0}
