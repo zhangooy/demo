@@ -1,0 +1,21 @@
+
+1. @click 和 $emit
+
+2. v-bind 和 props
+
+
+
+
+把
+
+module.exports = {
+  publicPath: process.env.NODE_ENV === 'production'
+    ? '/my-project/'
+    : '/'
+}
+
+改成
+
+module.exports = {
+  publicPath: "./"
+};
