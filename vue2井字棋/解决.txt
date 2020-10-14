@@ -1,0 +1,21 @@
+
+1. @click 和 $emit
+
+2. v-bind 和 props
+
+在vue.config.js文件里
+使用build打包后页面出现空白:解决方案
+
+把
+
+module.exports = {
+  publicPath: process.env.NODE_ENV === 'production'
+    ? '/my-project/'
+    : '/'
+}
+
+改成
+
+module.exports = {
+  publicPath: "./"
+};
