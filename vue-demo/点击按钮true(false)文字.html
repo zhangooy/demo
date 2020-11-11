@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="app">
+		<button v-on:click="ifon">kai</button>
+		<p v-if="a">{{text}}</p>
+	</div>
+
+	 <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.12/vue.min.js"></script>
+	<script>
+     var app = new Vue({
+     	el:'#app',
+     	data:{
+     		text:'hello',
+     		a: false,
+     	},
+     	methods:{
+     		ifon:function(){
+     			this.a = !this.a;
+    		}
+     	}
+     })
+
+	</script>
+</body>
+</html>
