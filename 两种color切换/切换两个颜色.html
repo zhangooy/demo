@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+      .one {
+      	background-color: red;
+      	width: 500px;
+      	height: 500px;
+      }
+      .two {
+      	background-color: yellow;
+      	width: 500px;
+      	height: 500px;
+     
+      }
+     /*     .test1{
+        width:100px;
+        height: 100px;
+        background-color: red;
+    }
+    .test2{
+        width:100px;
+        height: 100px;
+        background-color: yellow;
+    }*/
+	</style>
+</head>
+<body>
+	<button >按钮</button>
+	<div class="one"></div>
+	 <!-- <div class="test1" id="test1" alt="" onclick="myFunction()"> -->
+	<script>
+
+	 /*function myFunction(){
+        var div = document.getElementById('test1');
+        if(div.className.indexOf('test1') >= 0){
+            div.className='test2';
+        }else{
+            div.className='test1';
+        }
+    }*/
+    var btn = document.querySelector('button');
+     var div = document.querySelector('div');
+     btn.addEventListener('click',function(){
+       if(div.className.indexOf('one') >= 0){
+            div.className='two';
+        }else{
+            div.className='one';
+        }
+     })
+
+
+	</script>
+</body>
+</html>
