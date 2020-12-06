@@ -1,4 +1,4 @@
-- [absolute+marginauto居中方式](https://zhangooy.github.io/demo/水平垂直居中/absolute+marginauto.html)
+- [absolute+marginauto居中方式](https://zhangooy.github.io/demo/水平垂直居中/absolute + marginauto.html)
 
 
 - [absolute+负margin居中方式](https://zhangooy.github.io/demo/水平垂直居中/absolute+负margin.html)
